@@ -35,9 +35,9 @@ public class AWSCognitoUserManager {
     private AWSCognitoUserManager(Context context) {
         if (userPool == null) {
             Regions cognitoRegion = Regions.US_EAST_2;
-            String clientSecret = "1aqli2har02aojbsf3b1t5tbciq9rgsnq4n4coqu1bc05vli94ms";
-            String clientId = "jhmj2i7mtup17ls7ltmak0h92";//AWS Client details
-            String userPoolId = "us-east-2_OWAjVBylK";
+            String clientSecret = "";
+            String clientId = "";
+            String userPoolId = "";
 
             userPool = new CognitoUserPool(context, userPoolId, clientId, clientSecret, cognitoRegion);
         }

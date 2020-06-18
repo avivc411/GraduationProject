@@ -56,10 +56,10 @@ public class UserReportProcessor {
                 "Questionnaire", username, "user");
 
         Parse.initialize(new Parse.Configuration.Builder(context)
-                .applicationId("3a40729a203a63626664fdb4f37a1bd8802c1581")
+                .applicationId("")
                 // if defined
-                .clientKey("1872ec8a614edffc2e594daa17dd6355f0f6140a")
-                .server("http://3.19.234.120:80/parse/")
+                .clientKey("")
+                .server("")
                 .build()
         );
 
