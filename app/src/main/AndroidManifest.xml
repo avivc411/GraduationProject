@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.Project.project">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.Camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activities.SemanticMoodBubleActivity" />
+        <activity android:name=".Report.XYGraphActivity" />
+        <activity android:name=".Activities.SemanticMoodActivity" />
+        <activity android:name=".Activities.RekognitionEmotionsChartActivity" />
+        <activity android:name=".Activities.SingleReportActivity" />
+        <activity android:name=".Activities.HistoryListActivity" />
+        <activity android:name=".Activities.FitbitPermissionsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="FitbitPermissionsActivity"
+                    android:pathPattern=".*"
+                    android:scheme="emotionanalyzer" />
+            </intent-filter>
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Activities.PlacesOnMapActivity"
+            android:label="@string/title_activity_plcaes_on_map" />
+        <activity android:name=".Activities.NotificationActivity" />
+        <activity android:name=".Activities.UsageStatsActivity" />
+        <activity android:name=".Activities.GPSActivity" />
+        <activity android:name=".Activities.SettingActivity" />
+        <activity android:name=".Activities.UserReportActivity" />
+        <activity android:name=".Activities.QuestionnaireActivity" />
+        <activity android:name=".PictureSwift.DetailActivity" />
+        <activity android:name=".Activities.ChooseReportActivity" />
+        <activity android:name=".Activities.RegisterActivity" />
+        <activity android:name=".Activities.TakePictureActivity" />
+        <activity
+            android:name=".Activities.HomePageActivity"
+            android:parentActivityName=".Activities.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activities.MainActivity" />
+        </activity>
+        <activity android:name=".Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.XYGraphActivity" />
+
+        <receiver android:name=".Utilities.AlarmReceiver" />
+    </application>
+
+</manifest>

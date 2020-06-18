@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    android:orientation="vertical"
+    tools:context=".Activities.ChooseReportActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:text="@string/chooseReportTitle"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/maxDaysReportBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:text="@string/maxDaysReport" />
+
+        <Button
+            android:id="@+id/lastSevenDaysReportBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:text="@string/lastSevenDaysReport" />
+
+        <Button
+            android:id="@+id/lastThirtyDaysReportBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:text="@string/lastThirtyDaysReport" />
+
+        <Button
+            android:id="@+id/monthlyReport"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:onClick="showMonthsList"
+            android:text="@string/monthlyReport" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewPeriodicOptions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_10sdp" />
+
+</LinearLayout>

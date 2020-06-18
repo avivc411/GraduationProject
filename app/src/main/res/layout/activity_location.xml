@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    android:orientation="vertical"
+    tools:context=".Activities.GPSActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:layout_marginBottom="@dimen/_100sdp"
+        android:text="@string/chooseReportTitle"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_30sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Please make sure GPS or mobile data are on"
+        android:visibility="invisible" />
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/apply_gps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_100sdp"
+        android:background="@drawable/buttonshape"
+        android:text="Done" />
+</LinearLayout>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.SemanticMoodBubleActivity">
+
+    <Spinner
+        android:id="@+id/semanticMoodSpinner"
+        style="@style/spinner_style"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/plottt"
+        style="@style/APDefacto.Light"
+        android:layout_width="fill_parent"
+        android:layout_height="620dp"
+        android:layout_marginTop="20dp"
+        app:lineLabelRotationBottom="-45"
+        app:lineLabels="left|bottom"
+        app:graphMarginLeft="80dp"
+        app:graphMarginBottom="80dp"
+        app:title=""/>
+
+
+</LinearLayout>

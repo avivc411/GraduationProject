@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Activities.NotificationActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notify"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TimePicker
+        android:id="@+id/timePickerNotification"
+        style="@style/myTimePickerStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_320sdp"
+        android:timePickerMode="clock" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/repeat"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <RadioGroup
+            android:id="@+id/radioGroupDays"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/oneDayRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="checkButton"
+                android:text="1" />
+
+            <RadioButton
+                android:id="@+id/twoDayRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton"
+                android:text="2" />
+
+            <RadioButton
+                android:id="@+id/threeDayRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton"
+                android:text="3" />
+
+            <RadioButton
+                android:id="@+id/fourDayRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton"
+                android:text="4" />
+
+            <RadioButton
+                android:id="@+id/fiveDayRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton"
+                android:text="5" />
+
+            <RadioButton
+                android:id="@+id/sixDayRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton"
+                android:text="6" />
+
+            <RadioButton
+                android:id="@+id/sevenDayRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="checkButton"
+                android:text="7" />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/setNotificationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:text="Set" />
+
+        <Button
+            android:id="@+id/cancelNotificationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:text="Cancel" />
+
+    </LinearLayout>
+</LinearLayout>

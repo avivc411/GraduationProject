@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    android:orientation="vertical"
+    tools:context=".Activities.SingleReportActivity">
+
+    <TextView
+        android:id="@+id/title_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/chooseReportTitle"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_30sdp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dateTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_130sdp" />
+
+    <TextView
+        android:id="@+id/locationTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/featuresTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/usageTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/moodTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/questionAnswerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="TextView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/userPictureIV"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:contentDescription="User's picture."
+                android:paddingTop="@dimen/_7sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

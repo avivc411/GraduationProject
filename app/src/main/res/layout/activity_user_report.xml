@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    android:orientation="vertical"
+    tools:context=".Activities.UserReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/negativeSentimentBtn"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/buttonshapenotready"
+                android:onClick="loadUserNegativeSentimentStatistics"
+                android:text="@string/showNegativeSetimentInfo" />
+
+            <Button
+                android:id="@+id/historyButton"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonshapenotready"
+                android:onClick="loadHistory"
+                android:text="@string/showHistory" />
+
+            <Button
+                android:id="@+id/positiveSentimentBtn"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/buttonshapenotready"
+                android:onClick="loadUserPositiveSentimentStatistics"
+                android:text="@string/showPositiveSetimentInfo" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="-40dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/emotionPiechartBtn"
+            android:layout_width="@dimen/_95sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/buttonshape"
+            android:onClick="openEmotionPieGraph"
+            android:text="@string/openEmotionPiechart" />
+
+        <Button
+            android:id="@+id/emotionBarchartBtn"
+            android:layout_width="@dimen/_95sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:background="@drawable/buttonshape"
+            android:onClick="openEmotionBarGraph"
+            android:text="@string/openEmotionBarchart" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/emotionLocationMapBtn"
+            android:layout_width="@dimen/_95sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/buttonshape"
+            android:onClick="openEmotionLocationMap"
+            android:text="@string/openEmotionLocationMap" />
+
+        <Button
+            android:id="@+id/usageBarchartBtn"
+            android:layout_width="@dimen/_95sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:background="@drawable/buttonshape"
+            android:onClick="openUsageGraph"
+            android:text="@string/openUsageBarchart" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_240sdp"
+        android:orientation="horizontal">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChartReport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="createPieChart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"></com.github.mikephil.charting.charts.PieChart>
+
+        <ImageView
+            android:id="@+id/decodedImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChartReport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/usageChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/userPositiveInfoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center_horizontal|center_vertical">
+
+        <Button
+            android:id="@+id/generalReportBtn"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@drawable/buttonshape"
+            android:onClick="loadUserGeneralSentimentStatistics"
+            android:text="@string/showGenrealInfo"
+            android:textSize="12sp" />
+
+
+        <Button
+            android:id="@+id/dayAfterDayReport"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:background="@drawable/buttonshape"
+            android:onClick="showWeeklyReport"
+            android:text="@string/weeklyReport"
+            android:textSize="12sp" />
+
+
+        <Button
+            android:id="@+id/semanticMoodBtn"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:background="@drawable/buttonshape"
+            android:onClick="showSemanticLocationReport"
+            android:text="@string/semanticMood"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

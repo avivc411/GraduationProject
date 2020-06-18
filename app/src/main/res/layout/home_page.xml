@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    tools:context=".Activities.HomePageActivity">
+
+
+    <TextView
+        android:id="@+id/show_user_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_85sdp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="#00FF0000"
+        android:textColorLink="#CFBB11"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/fill_survey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/watchReportBtn"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:background="@drawable/buttonshape"
+        android:elevation="1dp"
+        android:includeFontPadding="true"
+        android:onClick="watchReport"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingTop="@dimen/_90sdp"
+        android:stateListAnimator="@null"
+        android:text="@string/my_reports"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fill_survey"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/fill_survey"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:background="@drawable/buttonshape"
+        android:onClick="moveToQuestionnaire"
+        android:paddingTop="@dimen/_90sdp"
+        android:stateListAnimator="@null"
+        android:text="@string/questionnaire"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/fitbit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/watchReportBtn" />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:background="@drawable/buttonshape"
+        android:onClick="SettingActivity"
+        android:paddingTop="@dimen/_90sdp"
+        android:stateListAnimator="@null"
+        android:text="@string/connect_fitbit"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/notifiyremind"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fitbit"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/fitbit"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:background="@drawable/buttonshape"
+        android:onClick="connectFitbit"
+        android:paddingTop="@dimen/_90sdp"
+        android:stateListAnimator="@null"
+        android:text="@string/delete_account"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/setting" />
+
+    <Button
+        android:id="@+id/notifiyremind"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:background="@drawable/buttonshape"
+        android:onClick="notificationActivity"
+        android:paddingTop="@dimen/_90sdp"
+        android:stateListAnimator="@null"
+        android:text="@string/change_profile"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logout" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginStart="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:background="@drawable/buttonshape"
+        android:onClick="logout"
+        android:paddingTop="@dimen/_90sdp"
+        android:stateListAnimator="@null"
+        android:text="@string/logout"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/fitbit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notifiyremind" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:drawableTop="@drawable/report"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/watchReportBtn"
+        app:layout_constraintEnd_toEndOf="@+id/watchReportBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/watchReportBtn"
+        app:layout_constraintTop_toTopOf="@+id/watchReportBtn"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/report" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/fill_survey"
+        app:layout_constraintEnd_toEndOf="@+id/fill_survey"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/fill_survey"
+        app:layout_constraintTop_toTopOf="@+id/fill_survey"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/questionare" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/notifiyremind"
+        app:layout_constraintEnd_toEndOf="@+id/notifiyremind"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/notifiyremind"
+        app:layout_constraintTop_toTopOf="@+id/notifiyremind"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/alarm" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/logout"
+        app:layout_constraintEnd_toEndOf="@+id/logout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/logout"
+        app:layout_constraintTop_toTopOf="@+id/logout"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/logout" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/setting"
+        app:layout_constraintEnd_toEndOf="@+id/setting"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/setting"
+        app:layout_constraintTop_toTopOf="@+id/setting"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/setting" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/fitbit"
+        app:layout_constraintEnd_toEndOf="@+id/fitbit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/fitbit"
+        app:layout_constraintTop_toTopOf="@+id/fitbit"
+        app:layout_constraintVertical_bias="0.08"
+        app:srcCompat="@drawable/fitbit" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_1sdp"
+        android:text="My Reports"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/watchReportBtn"
+        app:layout_constraintStart_toStartOf="@+id/watchReportBtn"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_1sdp"
+        android:text="Survery"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/fill_survey"
+        app:layout_constraintStart_toStartOf="@+id/fill_survey"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_1sdp"
+        android:text="Settings"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/setting"
+        app:layout_constraintStart_toStartOf="@+id/setting"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_1sdp"
+        android:text="@string/connect_fitbit"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/fitbit"
+        app:layout_constraintStart_toStartOf="@+id/fitbit"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_1sdp"
+        android:text="My Reminder"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/notifiyremind"
+        app:layout_constraintStart_toStartOf="@+id/notifiyremind"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/_1sdp"
+        android:text="Logout"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/logout"
+        app:layout_constraintStart_toStartOf="@+id/logout"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
